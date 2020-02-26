@@ -6,7 +6,8 @@ height = 200;
 margin = 8;
 color = c_purple;
 
-portrait_name = "<undefined>";
+portrait_name = "<character>";
+portrait_pose = "<pose>";
 portrait_size = 64;
 
 enum chl { index, choice };

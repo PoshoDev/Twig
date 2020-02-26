@@ -1,3 +1,5 @@
+///choice_make(index, text)
+
 children[argument0, chl.choice] = instance_create_depth(x, y, depth-1, obj_input);
 children[argument0, chl.choice].owner = self;
 children[argument0, chl.choice].width = 124;

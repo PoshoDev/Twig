@@ -31,7 +31,7 @@ if (!global.dragging && mouse_x>x && mouse_x<x+width && mouse_y>y && mouse_y<y+h
             else
                 var i = array_height_2d(children);
                 
-            children[i,chl.index] = instance_create_depth(mouse_x-width/2, mouse_y-height/4, depth+2, obj_dialog)
+            children[i,chl.index] = dialog_make(mouse_x-width/2, mouse_y-height/4);
             children[i,chl.index].parent = self;
             
             // Yes/No Templates
@@ -72,27 +72,5 @@ if (array_height_2d(children) >= 2)
     
 
 // Actual Drawing
-
-if (dragging)
-    draw_set_alpha(0.5);
-    
-draw_set_color(color);
-draw_rectangle(x, y, x+width, y+height, false);
-
-draw_set_color(c_red);
-draw_rectangle(x+margin, y+margin, x+margin+portrait_size, y+margin+portrait_size, false);
-
-draw_set_color(c_black);
-draw_text(x+margin*2+portrait_size, y+margin, portrait_name);
-
-if (selected)
-{
-    draw_set_color(c_white);
-    draw_rectangle(x, y, x+width, y+height, true);
-}
-
-draw_set_color(c_white);
-draw_set_alpha(1);
-
-dialog_draw_arrows();
+dialog_draw_self();
 
