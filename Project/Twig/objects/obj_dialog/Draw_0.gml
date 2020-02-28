@@ -1,6 +1,27 @@
 
 // Mouse In
-if (!global.dragging && mouse_x>x && mouse_x<x+width && mouse_y>y && mouse_y<y+height)
+/*if (creating)
+{
+    with (obj_dialog)
+        mask_index = spr_mask;
+        
+    var found = instance_position(mouse_x, mouse_y, obj_dialog);
+    
+    if (found!=noone && found !=self && found!=parent)
+    {
+        merging = true;
+        textbox.visible = false;
+        //draw_line_width(parent.pivot_end, parent.pivot_mid, found.x, found.pivot_mid, 4);
+        parent.children[array_length_1d(children)-1] = found;
+    }
+    else if (merging)
+    {
+        merging = false;
+        textbox.visible = true;
+        parent.children[array_length_1d(children)-1] = self;
+    }
+}*/
+/* else */if (!global.dragging && mouse_x>x && mouse_x<x+width && mouse_y>y && mouse_y<y+height)
 {
     selected = true;
     
